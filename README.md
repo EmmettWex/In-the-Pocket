@@ -1,22 +1,12 @@
-In the Pocket is an interactve drumset application, users will be able to:
-  - Play a drum set rendered on the page in front of them
-  - Select from multiple pre-set drum kits
-  - Create a custom drum kit from wide range of options
-  - Record your own drum takes on the application
-
-In addition, this project will include:
-  - An animated drum kit that moves based on user input.
-  - Instructions on how to use this application listed below.
+Have you always wanted to become a drummer but dont have the space for a kit of your own? Would your roommates throw you out at the first sign of a drum stick? Look no further than In the Pocket. In the Pocket is an interactive drum set simulator you can use in your browser. Just using your keyboard you can practice using three preset drum kits: Rock, Jazz, and Electronic. If you wish you can also build a custom drum kit from a wide range of our available drums and cymbals. Once you're ready to begin recording your first album you can use our recording feature and hear back your playing.
 
 Project Layout
-  - There is a wireframe template of the project located in the root directory named "project_template.png"
+  - There is a wireframe template of the project located in the assets directory named "project_template.png"
   - You can also follow this link to the wireframe: https://wireframe.cc/xWGU7T
 
 Technologies, Libraries, APIs
   - The drum set and stage will be rendered using canvas.
   - The audio recording and playing capabilities will be done using the Web Audio API or the Howler.js library. Potentially a mix of both.
-  
-  <!-- (finish researching this part) -->
 
 Implementation Timeline:
   - Friday Afternoon: Create basic functionality, more specifically create working eventListeners for keystrokes and output a sound bite.
