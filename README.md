@@ -50,3 +50,11 @@ Production README
 ☐ No .DS_Store files / debuggers / console.logs.
 
 ☐ Organized file structure, with /src and /dist directories.
+
+Files that are not included in project:
+
+/scripts/example.js
+/styles/example.scss
+lines 1 through 8 of /index.js
+line 14 on index.html
+
