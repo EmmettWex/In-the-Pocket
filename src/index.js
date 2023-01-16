@@ -1,16 +1,21 @@
-import Example from './scripts/example.js'
-import Strike from './scripts/strike.js'
+import RockDrums from './scripts/rockdrums.js'
+import ElectronicDrums from './scripts/electronicdrums.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const root = document.querySelector("#root");
-    // console.log('Hello World')
 
-    new Example(root);
+    let drumKit = "rock";
+    document.addEventListener('submit', (event) => {
+        event.preventDefault();
+        drumKit = event.submitter.id;
+    });
 
     document.addEventListener('keydown', (event) => {
         // may also want to pass in which kit is being used so
         // the strike class knows which sound files to use
-        new Strike(event);
+        event.preventDefault();
+        if (drumKit === "rock") new RockDrums(event);
+
+        if (drumKit === "electronic") new ElectronicDrums(event);
     });
 
 });

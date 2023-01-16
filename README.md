@@ -7,6 +7,7 @@ Project Layout
 Technologies, Libraries, APIs
   - The drum set and stage will be rendered using canvas.
   - The audio recording and playing capabilities will be done using the Web Audio API or the Howler.js library. Potentially a mix of both.
+  - Drum audio samples are from the free-to-download Eraser Fase kit 001: 68 classic drum machines
 
 Implementation Timeline:
   - Friday Afternoon: Create basic functionality, more specifically create working eventListeners for keystrokes and output a sound bite.

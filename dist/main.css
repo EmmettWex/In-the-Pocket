@@ -1,11 +1,30 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-#root > h1 {
-  border: 4px solid orange;
-  padding: 20px;
+body {
+  background-color: gray;
+  display: flex;
 }
 
-#root {
-  color: orange;
+button {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas {
+  border: 1px solid black;
+  padding: 0;
+  margin: auto;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-selector {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
