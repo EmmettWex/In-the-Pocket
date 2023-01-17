@@ -1,5 +1,5 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById('stage');
+const ctx = canvas.getContext('2d', { alpha: false });
 canvas.width = 1080;
 canvas.height = 720;
 
@@ -13,6 +13,6 @@ function make_stage() {
     }
 }
 
-
-// canvas should be the whole site
-// modal can pop up over the canvas to select which set you want
+ctx.beginPath();
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+ctx.stroke();

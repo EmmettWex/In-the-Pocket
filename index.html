@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="buttons">
+    <div id="kits">
         <h3 id="kit-selector">Select Your Drum Kit</h3>
         <form action="">
             <input id="rock" type="submit" value="Rock">
@@ -23,8 +23,16 @@
         </form>
     </div>
 
-    <canvas id="canvas"></canvas>
-    <script src="./src/scripts/stage.js"></script>
+    <div id="recorder">
+        <h3 id="redording-studio">Click below to record your track</h3>
+        <form action="">
+            <input id="record" type="submit" value="Start Recording">
+        </form>
+    </div>
+    <canvas id="stage"></canvas>
+    <script src="./src/scripts/canvas/stage.js"></script>
+    <canvas class="drumset" id="bass-drum"></canvas>
+    <script src="./src/scripts/canvas/drumset.js"></script>
 </body>
 
 </html>

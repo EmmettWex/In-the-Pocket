@@ -3,6 +3,11 @@ body {
     display: flex;
 }
 
+canvas {
+    position: absolute;
+    left: 200px;
+}
+
 button {
     background-color: pink;
     display: flex;
@@ -10,13 +15,26 @@ button {
     justify-content: center;
 }
 
-#canvas {
+// background stage image
+#stage {
     border: 1px solid black;
     padding: 0;
     margin: auto;
     display: inline-block;
     align-items: center;
     justify-content: center;
+}
+
+// drumset class (may not be necessary).
+.drumset {
+    border: 1px solid black;
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 2;
 }
 
 .kit-selector {
