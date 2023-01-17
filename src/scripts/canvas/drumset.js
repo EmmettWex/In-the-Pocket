@@ -88,6 +88,9 @@ function drawCymbalStands() {
     ctx2.stroke();
     ctx2.fill();
     ctx2.closePath();
+
+    // still need to make the lower parts of the crash one
+    // and crash two stands, along with the tops.
 }
 
 // bass drum
