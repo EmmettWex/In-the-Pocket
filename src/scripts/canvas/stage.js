@@ -7,7 +7,7 @@ make_stage();
 
 function make_stage() {
     const stage = new Image();
-    stage.src = '../assets/stage_images/drum_stage.jpeg';
+    stage.src = '../../../assets/stage_images/drum_stage.jpeg';
     stage.onload = function () {
         ctx.drawImage(stage, 0, 0, canvas.width, canvas.height)
     }
