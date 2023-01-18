@@ -83,11 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (drumMap.has(struckKey)) {
             let drumHit = drumMap.get(struckKey);
             drumHit.hit(drumKit);
-            requestAnimationFrame(playDrums)
-            // Request animation frame here, pass in playDrums
         }
     });
-
+    requestAnimationFrame(playDrums);
+    
     function playDrums() {
         // clear the board here
         ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
