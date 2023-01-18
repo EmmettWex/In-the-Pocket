@@ -1,3 +1,5 @@
+import { Howl, Howler } from 'howler';
+
 class ClosedHats {
 
     constructor(ctx) {
@@ -5,7 +7,7 @@ class ClosedHats {
         this.hatHeight = 425;
     }
 
-    drawClosedHats() {
+    draw() {
         // bottom high hat
         this.ctx.beginPath();
         this.ctx.ellipse(400, this.hatHeight, 10, 50, 1.5 * Math.PI, 1.5 * Math.PI, .5 * Math.PI, true);
@@ -33,14 +35,33 @@ class ClosedHats {
         this.ctx.closePath();
     }
 
-    hit() {
+    hit(drumKit) {
         this.hatHeight = 430;
+
+        if (drumKit === "rock") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/rock/Hat Closed.wav']
+            });
+
+            sound.play();
+        } else if (drumKit === "electronic") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/Electric_Kit/Hat Closed.wav']
+            });
+
+            sound.play();
+        }
     }
 
-    checkHatHeight() {
+    checkPosition() {
         if (this.hatHeight > 425) {
             this.hatHeight --;
         }
+    }
+
+    update() {
+        this.checkPosition();
+        this.draw();
     }
 }
 

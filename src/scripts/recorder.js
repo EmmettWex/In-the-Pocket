@@ -3,7 +3,4 @@ class Playback {
         this.recording = recording;
         this.drumkit = drumkit;
     }
-
-    
-
 }

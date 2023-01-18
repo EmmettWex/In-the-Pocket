@@ -1,3 +1,5 @@
+import { Howl, Howler } from 'howler';
+
 class SnareDrum {
 
     constructor(ctx) {
@@ -20,7 +22,7 @@ class SnareDrum {
         // maybe don't have the head color change, does it matter?
     }
 
-    drawSnareDrum() {
+    draw() {
 
         // snare drum stand
         this.ctx.beginPath();
@@ -85,31 +87,49 @@ class SnareDrum {
 
     }
 
-    hit() {
+    hit(drumKit) {
         this.shellY = 450;
         this.bottomY = 480;
         this.topRingY = 450;
         this.drumHeadY = 450;
         this.headColor = "#eaa4db";
+
+        if (drumKit === "rock") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/rock/Snaredrum.wav']
+            });
+
+            sound.play();
+        } else if (drumKit === "electronic") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/Electric_Kit/Snaredrum.wav']
+            });
+
+            sound.play();
+        }
     }
 
-    checkDrumHeight() {
+    checkPosition() {
         if (this.shellY > 445) {
-            this.resetSnareDrum();
+            this.reset();
         }
 
-        if (this.shellY < 448) {
+        if (this.shellY === 445) {
             this.headColor = "#f5f5f5";
         }
     }
 
-    resetSnareDrum() {
+    reset() {
         this.shellY--;
         this.bottomY--;
         this.topRingY--;
         this.drumHeadY--;
     }
 
+    update() {
+        this.checkPosition();
+        this.draw();
+    }
 }
 
 export default SnareDrum;

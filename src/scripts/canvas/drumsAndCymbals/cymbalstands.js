@@ -4,7 +4,7 @@ class CymbalStands {
         this.ctx = ctx;
     }
 
-    drawCymbalStands() {
+    draw() {
         // Crash one stand below:
         this.ctx.beginPath();
         this.ctx.rect(457.5, 353.5, 5, 150);
@@ -108,6 +108,9 @@ class CymbalStands {
         this.ctx.closePath();
     }
 
+    update() {
+        this.draw();
+    }
 }
 
 export default CymbalStands;

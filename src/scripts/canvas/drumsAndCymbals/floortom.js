@@ -1,3 +1,5 @@
+import { Howl, Howler } from 'howler';
+
 class FloorTom {
 
     constructor(ctx) {
@@ -19,7 +21,7 @@ class FloorTom {
         this.headColor = "#f5f5f5"
     }
 
-    drawFloorTom() {
+    draw() {
         // floor legs behind the drum
         this.ctx.beginPath();
         this.ctx.rect(560, 490, 5, 80);
@@ -83,34 +85,50 @@ class FloorTom {
         this.ctx.closePath();
     }
 
-    hit () {
+    // add the keydown event listener here, it will be called 60 times a second.
+    hit (drumKit) {
         this.shellY = 450;
         this.bottomY = 530;
         this.topRingY = 450;
         this.drumHeadY = 450;
         this.headColor = "#eaa4db"
+        
+        if (drumKit === "rock") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/rock/Tom L.wav']
+            });
+
+            sound.play();
+        } else if (drumKit === "electronic") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/Electric_Kit/Tom L.wav']
+            });
+
+            sound.play();
+        }
     }
 
-    checkDrumHeight() {
-        if (this.shellY > 445) {
-            this.resetOneTom();
+    checkPosition() {
+        if (this. shellY > 445) {
+            this.reset();
         }
 
-        if (this.shellY < 448) {
+        if (this.shellY === 445) {
             this.headColor = "#f5f5f5";
         }
     }
 
-    resetFloorTom () {
+    reset() {
         this.shellY --;
         this.bottomY --;
         this.topRingY --;
         this.drumHeadY --;
     }
 
+    // finish out the update
     update() {
-        this.drawFloorTom();
-        this.checkDrumHeight();
+        this.checkPosition();
+        this.draw();
     }
 }
 

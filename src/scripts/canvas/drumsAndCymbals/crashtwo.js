@@ -1,3 +1,5 @@
+import { Howl, Howler } from 'howler';
+
 class CrashTwo {
 
     constructor(ctx) {
@@ -7,7 +9,7 @@ class CrashTwo {
         this.bellHeight = 3.5;
     }
 
-    drawCrashTwo() {
+    draw() {
         // unhit crash cymbal
         this.ctx.beginPath();
         this.ctx.ellipse(575, 350, this.crashHeight, 50, .5 * Math.PI, 0, 2 * Math.PI);
@@ -36,16 +38,35 @@ class CrashTwo {
         this.ctx.closePath();
     }
 
-    hit() {
+    hit(drumKit) {
         this.crashHeight = 20;
         this.bellHeight = 4.75;
+
+        if (drumKit === "rock") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/rock/Cowbell L.wav']
+            });
+
+            sound.play();
+        } else if (drumKit === "electronic") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/Electric_Kit/Crash-02.wav']
+            });
+
+            sound.play();
+        }
     }
 
-    checkCrashHeight() {
-        if (this.checkCrashHeight > 15) {
+    checkPosition() {
+        if (this.crashHeight > 15) {
             this.crashHeight--;
             this.bellHeight -= .25;
         }
+    }
+
+    update() {
+        this.checkPosition();
+        this.draw();
     }
 }
 

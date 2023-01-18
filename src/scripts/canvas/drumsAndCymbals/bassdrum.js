@@ -1,3 +1,5 @@
+import { Howl, Howler } from 'howler';
+
 class BassDrum {
 
     constructor(ctx) {
@@ -10,7 +12,7 @@ class BassDrum {
         this.count = 0;
     }
 
-    drawBassDrum() {
+    draw() {
         // shell of the bass drum
         this.ctx.beginPath();
         this.ctx.arc(540, 500.75, 70, 0, 2 * Math.PI);
@@ -28,19 +30,40 @@ class BassDrum {
         this.ctx.stroke();
     }
 
-    hit() {
+
+
+    hit(drumKit) {
         this.count = 5;
         this.bassDrumColor = "#eaa4db";
+
+        if (drumKit === "rock") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/rock/Bassdrum.wav']
+            });
+
+            sound.play();
+        } else if (drumKit === "electronic") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/Electric_Kit/Bassdrum-01.wav']
+            });
+
+            sound.play();
+        }
     }
 
-    checkDrumCount() {
+    checkPosition() {
         if (this.count > 0) {
             this.count --;
         }
 
-        if (this.count < 3) {
+        if (this.count == 0) {
             this.bassDrumColor = "#f5f5f5";
         }
+    }
+
+    update() {
+        this.checkPosition();
+        this.draw();
     }
 
 }

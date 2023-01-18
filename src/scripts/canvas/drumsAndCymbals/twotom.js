@@ -1,3 +1,5 @@
+import { Howl, Howler } from 'howler';
+
 class TwoTom {
 
     constructor(ctx) {
@@ -20,7 +22,7 @@ class TwoTom {
         // maybe don't have the head color change, does it matter?
     }
 
-    drawTwoTom() {
+    draw() {
 
         // shell of the drum
         this.ctx.beginPath();
@@ -60,31 +62,49 @@ class TwoTom {
 
     }
 
-    hit() {
+    hit(drumKit) {
         this.shellY = 405;
         this.bottomY = 435;
         this.topRingY = 400;
         this.drumHeadY = 400;
         this.headColor = "#eaa4db"
+
+        if (drumKit === "rock") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/rock/Tom M.wav']
+            });
+
+            sound.play();
+        } else if (drumKit === "electronic") {
+            let sound = new Howl({
+                src: ['../assets/audio_files/Electric_Kit/Tom M.wav']
+            });
+
+            sound.play();
+        }
     }
 
-    checkDrumHeight() {
+    checkPosition() {
         if (this.shellY > 400) {
-            this.resetOneTom();
+            this.reset();
         }
 
-        if (this.shellY < 403) {
+        if (this.shellY === 400) {
             this.headColor = "#f5f5f5";
         }
     }
 
-    resetTwoTom() {
+    reset() {
         this.shellY--;
         this.bottomY--;
         this.topRingY--;
         this.drumHeadY--;
     }
 
+    update() {
+        this.checkPosition();
+        this.draw();
+    }
 }
 
 export default TwoTom;

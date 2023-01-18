@@ -6,12 +6,15 @@ import BassDrum from "./scripts/canvas/drumsAndCymbals/bassdrum";
 import SnareDrum from "./scripts/canvas/drumsAndCymbals/snaredrum";
 import FloorTom from "./scripts/canvas/drumsAndCymbals/floortom";
 import ClosedHats from "./scripts/canvas/drumsAndCymbals/closedhats";
-// import OpenHats from "./scripts/canvas/drumsAndCymbals/openhats";
+import OpenHats from "./scripts/canvas/drumsAndCymbals/openhats";
 import CrashOne from "./scripts/canvas/drumsAndCymbals/crashone";
 import CrashTwo from "./scripts/canvas/drumsAndCymbals/crashtwo";
 import Ride from "./scripts/canvas/drumsAndCymbals/ride";
 import RockDrums from './scripts/rockdrums.js'
 import ElectronicDrums from './scripts/electronicdrums.js'
+
+// requestanimationframe method
+// flappybird asteroids
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas2 = document.getElementById('bass-drum');
@@ -26,35 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const snaredrum = new SnareDrum(ctx2);
     const floortom = new FloorTom(ctx2);
     const closedhats = new ClosedHats(ctx2);
-    // const openhats = new OpenHats(ctx2);
+    const openhats = new OpenHats(ctx2);
     const crashone = new CrashOne(ctx2);
     const crashtwo = new CrashTwo(ctx2);
     const ride = new Ride(ctx2);
-    
-    // draw the drum set here.
-    cymbalstands.drawCymbalStands();
-    onetom.drawOneTom();
-    twotom.drawTwoTom();
-    bassdrum.drawBassDrum();
-    snaredrum.drawSnareDrum();
-    floortom.drawFloorTom();
-    closedhats.drawClosedHats();
-    // openhats.drawOpenHats();
-    crashone.drawCrashOne();
-    crashtwo.drawCrashTwo();
-    ride.drawRide();
-
-    // This is the kit selection option
-    let drumKit = "rock";
-    const kits = document.getElementById('kits');
-    kits.addEventListener('submit', (event) => {
-        event.preventDefault();
-        drumKit = event.submitter.id;
-    });
-
-    // creating single instances of drumsets below to be passed into the event listener
-    const rockdrums = new RockDrums();
-    const electronicdrums = new ElectronicDrums();
 
     const drumMap = new Map([
         ["1", bassdrum],
@@ -69,63 +47,67 @@ document.addEventListener('DOMContentLoaded', () => {
         ["o", floortom],
         ["7", closedhats],
         ["e", closedhats],
-        ["6", closedhats],
+        ["6", openhats],
         ["8", ride],
         ["r", ride],
         ["9", crashone],
         ["0", crashtwo]
     ]);
+    
+    // draw the drum set here.
+    cymbalstands.draw();
+    onetom.draw();
+    twotom.draw();
+    bassdrum.draw();
+    snaredrum.draw();
+    floortom.draw();
+    closedhats.draw();
+    openhats.draw();
+    crashone.draw();
+    crashtwo.draw();
+    ride.draw();
 
-    crashtwo.update
+    // This is the kit selection option
+    let drumKit = "rock"; 
+    const kits = document.getElementById('kits');
+    kits.addEventListener('submit', (event) => {
+        event.preventDefault();
+        drumKit = event.submitter.id;
+    });
 
     // This listens for the key presses to play the drums
     document.addEventListener('keydown', (event) => {
         event.preventDefault();
         let struckKey = event.key.toLowerCase();
-        let drumHit = drumMap.get(struckKey);
-        console.log(drumHit);
-        if (drumKit === "rock") rockdrums.handleHit(struckKey);
-        if (drumKit === "electronic") electronicdrums.handleHit(struckKey);
 
-        // call the animation for the appropriate drum
-        drumHit.hit();
-        onetom.drawOneTom();
-        twotom.drawTwoTom();
-        bassdrum.drawBassDrum();
-        snaredrum.drawSnareDrum();
-        floortom.drawFloorTom();
-        closedhats.drawClosedHats();
-        // openhats.drawOpenHats();
-        crashone.drawCrashOne();
-        crashtwo.drawCrashTwo();
-        ride.drawRide();
+        if (drumMap.has(struckKey)) {
+            let drumHit = drumMap.get(struckKey);
+            drumHit.hit(drumKit);
+            requestAnimationFrame(playDrums)
+            // Request animation frame here, pass in playDrums
+        }
     });
 
-    // setInterval(rockOn(), 33);
+    function playDrums() {
+        // clear the board here
+        ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
 
-    // function rockOn() {
-    //     onetom.checkDrumHeight();
-    //     twotom.checkDrumHeight();
-    //     bassdrum.checkDrumCount();
-    //     snaredrum.checkDrumHeight();
-    //     floortom.checkDrumHeight();
-    //     closedhats.checkHatHeight();
-    //     crashone.checkCrashHeight();
-    //     crashtwo.checkCrashHeight();
-    //     ride.checkRideHeight();
-    // }    
+        // update all drums here
+        cymbalstands.update();
+        onetom.update();
+        twotom.update();
+        bassdrum.update();
+        snaredrum.update();
+        floortom.update();
+        closedhats.update();
+        openhats.update();
+        crashone.update();
+        crashtwo.update();
+        ride.update();
 
-    // function checkDrums() {
-    //     onetom.checkDrumHeight();
-    //     twotom.checkDrumHeight();
-    //     bassdrum.checkDrumCount();
-    //     snaredrum.checkDrumHeight();
-    //     floortom.checkDrumHeight();
-    //     closedhats.checkHatHeight();
-    //     crashone.checkCrashHeight();
-    //     crashtwo.checkCrashHeight();
-    //     ride.checkRideHeight();
-    // }
+        requestAnimationFrame(playDrums);
+    }
+
     
 
     // This allows you to record your drum track.
