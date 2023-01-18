@@ -141,15 +141,26 @@ table {
   \****************************************************************************************************/
 body {
     font-family: sans-serif;
-    background-color: gray;
-    width: 1480px;
+    width: 100vh;
+    height: 100vh;
+    background-image:
+        linear-gradient(
+            to bottom left,
+            #000000, 
+            #41004e, 
+            #550061,
+            #6a0075, 
+            #801289, 
+            #962d9e, 
+            #ac43b3
+        );
 }
 
 section {
     width: 200px;
     height: 720px;
-    display: inline-block;
     padding-top: 30px;
+    margin-left: 12.5px;
 }
 
 div {
@@ -160,29 +171,62 @@ div {
 }
 
 h3 {
+    font-weight: bold;
     font-size: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 13px;
+    box-shadow: 0px 0px 10px #000000;
+    text-shadow: 1.5px 1.5px 5px #85718e;
 }
 
 form {
-    padding-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 #title {
+    font-family: OCR A Std, monospace;
+    color: #999494;
+    letter-spacing: 0.05em;
+    text-shadow: 1.5px 1.5px 5px #85718e;
     font-size: 42px;
+    margin-top: 10px;
     padding-top: 12.5px;
     padding-bottom: 12.5px;
     text-align: center;
+    border-radius: 20px;
+    width: 1080px;
+    margin-left: 225px;
+    box-shadow: 0px 0px 10px #000000;
 }
 
 canvas {
     position: absolute;
-    left: 200px;
-    top: 75px;
+    left: 225px;
+    top: 85px;
+    border-radius: 50px;
+    box-shadow: 0 0 200px #6a0075 inset;
 }
 
 .button {
+    font-weight: bold;
+    color: #6a0075;
     background-color: pink;
+    width: 115px;
+    height: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #6a0075 inset;
+    box-shadow: 0 0 10px #85718e;
+}
+
+.controls {
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 1.5px 1.5px 5px #85718e;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

@@ -10,8 +10,8 @@ import OpenHats from "./scripts/canvas/drumsAndCymbals/openhats";
 import CrashOne from "./scripts/canvas/drumsAndCymbals/crashone";
 import CrashTwo from "./scripts/canvas/drumsAndCymbals/crashtwo";
 import Ride from "./scripts/canvas/drumsAndCymbals/ride";
-import RockDrums from './scripts/rockdrums.js'
-import ElectronicDrums from './scripts/electronicdrums.js'
+// import RockDrums from './scripts/rockdrums.js'
+// import ElectronicDrums from './scripts/electronicdrums.js'
 
 // requestanimationframe method
 // flappybird asteroids

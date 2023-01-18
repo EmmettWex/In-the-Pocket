@@ -1,117 +1,117 @@
-import { Howl, Howler } from 'howler';
+// import { Howl, Howler } from 'howler';
 
-class ElectronicDrums {
+// class ElectronicDrums {
     
-    constructor() {
+//     constructor() {
         
-        this.functions = new Map([
-            ["1", this.hitBassDrum],
-            [" ", this.hitBassDrum],
-            ["2", this.hitSnareDrum],
-            ["y", this.hitSnareDrum],
-            ["3", this.hitOneTom],
-            ["u", this.hitOneTom],
-            ["4", this.hitTwoTom],
-            ["i", this.hitTwoTom],
-            ["5", this.hitFloorTom],
-            ["o", this.hitFloorTom],
-            ["7", this.hitHighHatClosed],
-            ["e", this.hitHighHatClosed],
-            ["6", this.hitHighHatOpen],
-            ["8", this.hitRideCymbal],
-            ["r", this.hitRideCymbal],
-            ["9", this.hitCrashOne],
-            ["0", this.hitCrashTwo]
-        ]);
-    }
+//         this.functions = new Map([
+//             ["1", this.hitBassDrum],
+//             [" ", this.hitBassDrum],
+//             ["2", this.hitSnareDrum],
+//             ["y", this.hitSnareDrum],
+//             ["3", this.hitOneTom],
+//             ["u", this.hitOneTom],
+//             ["4", this.hitTwoTom],
+//             ["i", this.hitTwoTom],
+//             ["5", this.hitFloorTom],
+//             ["o", this.hitFloorTom],
+//             ["7", this.hitHighHatClosed],
+//             ["e", this.hitHighHatClosed],
+//             ["6", this.hitHighHatOpen],
+//             ["8", this.hitRideCymbal],
+//             ["r", this.hitRideCymbal],
+//             ["9", this.hitCrashOne],
+//             ["0", this.hitCrashTwo]
+//         ]);
+//     }
 
-    handleHit(struckKey) {
+//     handleHit(struckKey) {
 
-        // to key into the map you use the .get() function!
-        if (this.functions.has(struckKey)) {
-            this.functions.get(struckKey)();
-        }
-    }
+//         // to key into the map you use the .get() function!
+//         if (this.functions.has(struckKey)) {
+//             this.functions.get(struckKey)();
+//         }
+//     }
 
-    hitBassDrum() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Bassdrum-01.wav']
-        });
+//     hitBassDrum() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Bassdrum-01.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitSnareDrum() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Snaredrum.wav']
-        });
+//     hitSnareDrum() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Snaredrum.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitOneTom() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Tom H.wav']
-        });
+//     hitOneTom() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Tom H.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitTwoTom() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Tom M.wav']
-        });
+//     hitTwoTom() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Tom M.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitFloorTom() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Tom L.wav']
-        });
+//     hitFloorTom() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Tom L.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitHighHatOpen() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Hat Open.wav']
-        });
+//     hitHighHatOpen() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Hat Open.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitHighHatClosed() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Hat Closed.wav']
-        });
+//     hitHighHatClosed() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Hat Closed.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitRideCymbal() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Cabasa.wav']
-        });
+//     hitRideCymbal() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Cabasa.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitCrashOne() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Crash-01.wav']
-        });
+//     hitCrashOne() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Crash-01.wav']
+//         });
 
-        sound.play();
-    }
+//         sound.play();
+//     }
 
-    hitCrashTwo() {
-        let sound = new Howl({
-            src: ['../assets/audio_files/Electric_Kit/Crash-02.wav']
-        });
+//     hitCrashTwo() {
+//         let sound = new Howl({
+//             src: ['../assets/audio_files/Electric_Kit/Crash-02.wav']
+//         });
 
-        sound.play();
-    }
-}
+//         sound.play();
+//     }
+// }
 
-export default ElectronicDrums;
+// export default ElectronicDrums;
