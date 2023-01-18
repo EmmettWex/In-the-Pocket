@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "javascript_project",
   "version": "1.0.0",
   "description": "",
@@ -14,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",

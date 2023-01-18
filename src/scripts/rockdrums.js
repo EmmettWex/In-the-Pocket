@@ -42,7 +42,9 @@ class RockDrums {
         const struckKey = event.key.toLowerCase();
 
         // to key into the map you use the .get() function!
-        this.functions.get(struckKey)();
+        if (this.functions.has(struckKey)) {
+            this.functions.get(struckKey)();
+        }
     }
 
     hitBassDrum() {

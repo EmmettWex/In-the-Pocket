@@ -1,7 +1,12 @@
+import Drumset from './scripts/canvas/drumset.js';
 import RockDrums from './scripts/rockdrums.js'
 import ElectronicDrums from './scripts/electronicdrums.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+    // const canvas2 = document.getElementById('bass-drum');
+    // const ctx2 = canvas2.getContext('2d');
+    // canvas2.width = 1080;
+    // canvas2.height = 720;
 
     // This is the kit selection option
     let drumKit = "rock";
@@ -14,8 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // This listens for the key presses to play the drums
     document.addEventListener('keydown', (event) => {
         event.preventDefault();
+
         if (drumKit === "rock") new RockDrums(event);
         if (drumKit === "electronic") new ElectronicDrums(event);
+
+        // call the animation for the appropriate drum
     });
 
     // This allows you to record your drum track.
