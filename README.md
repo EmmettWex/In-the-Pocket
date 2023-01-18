@@ -1,13 +1,13 @@
-Have you always wanted to become a drummer but dont have the space for a kit of your own? Would your roommates throw you out at the first sign of a drum stick? Look no further than In the Pocket. In the Pocket is an interactive drum set simulator you can use in your browser. Just using your keyboard you can practice using three preset drum kits: Rock, Jazz, and Electronic. If you wish you can also build a custom drum kit from a wide range of our available drums and cymbals. Once you're ready to begin recording your first album you can use our recording feature and hear back your playing.
+Have you always wanted to become a drummer but dont have the space for a kit of your own? Would your roommates throw you out at the first sign of a drum stick? Look no further than In the Pocket. In the Pocket is an interactive drum set simulator you can use in your browser. Just using your keyboard you can practice using two preset drum kits: Rock, and Electronic. If you wish you can also build a custom drum kit from a wide range of our available drums and cymbals (coming soon). Once you're ready to begin recording your first album you can use our recording feature and hear back your playing (coming soon).
 
 Project Layout
-  - There is a wireframe template of the project located in the assets directory named "project_template.png"
-  - You can also follow this link to the wireframe: https://wireframe.cc/xWGU7T
+  - See below for the Wireframe:
+![In The Pocket WIREFRAME](assets/project_template.png)
 
 Technologies, Libraries, APIs
-  - The drum set and stage will be rendered using canvas.
-  - The audio recording and playing capabilities will be done using the Web Audio API or the Howler.js library. Potentially a mix of both.
-  - Drum audio samples are from the free-to-download Eraser Fase kit 001: 68 classic drum machines
+  - The drum set and background are two separate canvas's. The background is an image being pulled from the asset folder. The drumset however is a separate canvas drawn completely from scratch.
+  - The audio recording and playing capabilities are using the Howler.js library. The audio files are very easy to play and are being pulled from the assets folder.
+  - Drum audio samples are from the free-to-download Eraser Fase kit 001: 68 classic drum machines: https://eraserfase.com/collections/sample-packs/products/kit-001-68-classic-drum-machines
 
 Implementation Timeline:
   - Friday Afternoon: Create basic functionality, more specifically create working eventListeners for keystrokes and output a sound bite.
