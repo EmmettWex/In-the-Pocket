@@ -36,7 +36,7 @@ class CrashOne {
         this.ctx.closePath();
     }
 
-    hitCrashOne() {
+    hit() {
         this.crashHeight = 20;
         this.bellHeight = 4.75;
     }

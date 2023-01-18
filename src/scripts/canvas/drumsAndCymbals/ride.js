@@ -39,7 +39,7 @@ class Ride {
         this.ctx.closePath();
     }
 
-    hitRide() {
+    hit() {
         this.crashHeight = 27.5;
         this.bellHeight = 6.25;
     }

@@ -1,55 +1,55 @@
-import CymbalStands from "./drumsAndCymbals/cymbalstands";
-import OneTom from "./drumsAndCymbals/onetom";
-import TwoTom from "./drumsAndCymbals/twotom";
-import BassDrum from "./drumsAndCymbals/bassdrum";
-import SnareDrum from "./drumsAndCymbals/snaredrum";
-import FloorTom from "./drumsAndCymbals/floortom";
-import ClosedHats from "./drumsAndCymbals/closedhats";
-import OpenHats from "./drumsAndCymbals/openhats";
-import CrashOne from "./drumsAndCymbals/crashone";
-import CrashTwo from "./drumsAndCymbals/crashtwo";
-import Ride from "./drumsAndCymbals/ride"
+// import CymbalStands from "./drumsAndCymbals/cymbalstands";
+// import OneTom from "./drumsAndCymbals/onetom";
+// import TwoTom from "./drumsAndCymbals/twotom";
+// import BassDrum from "./drumsAndCymbals/bassdrum";
+// import SnareDrum from "./drumsAndCymbals/snaredrum";
+// import FloorTom from "./drumsAndCymbals/floortom";
+// import ClosedHats from "./drumsAndCymbals/closedhats";
+// import OpenHats from "./drumsAndCymbals/openhats";
+// import CrashOne from "./drumsAndCymbals/crashone";
+// import CrashTwo from "./drumsAndCymbals/crashtwo";
+// import Ride from "./drumsAndCymbals/ride";
 
 // const canvas2 = document.getElementById('bass-drum');
 // const ctx2 = canvas2.getContext('2d');
 // canvas2.width = 1080;
 // canvas2.height = 720;
 
-// class Drumset {
-//     constructor(ctx) {
-//         resting
-//     }
+// // class Drumset {
+// //     constructor(ctx) {
+// //         resting
+// //     }
 
-//     readKeyStroke(keyStroke) {
-//         animated
-//     }
-// }
+// //     readKeyStroke(keyStroke) {
+// //         animated
+// //     }
+// // }
 
-// new Drumset()
+// // new Drumset()
 
-class Drumset {
-    constructor(ctx) {
-        this.ctx = ctx;
-    }
-}
+// // class Drumset {
+// //     constructor(ctx) {
+// //         this.ctx = ctx;
+// //     }
+// // }
 
-export default Drumset;
+// // export default Drumset;
 
 // drawDrumSet();
 
-// function drawDrumSet() {
-//     drawCymbalStands();
-//     drawOneTom(); // done
-//     drawTwoTom(); // done
-//     drawBassDrum(); // done
-//     drawSnareDrum(); // done
-//     drawFloorTom(); // done
-//     // drawHighHatClosed();
-//     drawHighHatOpen();
-//     drawCrashOne(); // done
-//     drawCrashTwo(); // done
-//     drawRide(); // done
-// }
+// // function drawDrumSet() {
+// //     drawCymbalStands();
+// //     drawOneTom(); // done
+// //     drawTwoTom(); // done
+// //     drawBassDrum(); // done
+// //     drawSnareDrum(); // done
+// //     drawFloorTom(); // done
+// //     // drawHighHatClosed();
+// //     drawHighHatOpen();
+// //     drawCrashOne(); // done
+// //     drawCrashTwo(); // done
+// //     drawRide(); // done
+// // }
 
 // // cymbal stands
 // function drawCymbalStands() {

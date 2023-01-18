@@ -85,7 +85,7 @@ class SnareDrum {
 
     }
 
-    hitSnareDrum() {
+    hit() {
         this.shellY = 450;
         this.bottomY = 480;
         this.topRingY = 450;

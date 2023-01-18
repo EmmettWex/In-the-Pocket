@@ -60,7 +60,7 @@ class OneTom {
 
     }
 
-    hitOneTom() {
+    hit() {
         this.shellY = 405;
         this.bottomY = 435;
         this.topRingY = 400;
@@ -83,6 +83,10 @@ class OneTom {
         this.bottomY--;
         this.topRingY--;
         this.drumHeadY--;
+    }
+
+    update() {
+        this.drawOneTom();
     }
 
 }

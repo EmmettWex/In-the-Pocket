@@ -28,7 +28,7 @@ class BassDrum {
         this.ctx.stroke();
     }
 
-    hitBassDrum() {
+    hit() {
         this.count = 5;
         this.bassDrumColor = "#eaa4db";
     }

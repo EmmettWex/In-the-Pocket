@@ -60,7 +60,7 @@ class TwoTom {
 
     }
 
-    hitTwoTom() {
+    hit() {
         this.shellY = 405;
         this.bottomY = 435;
         this.topRingY = 400;

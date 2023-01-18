@@ -17,10 +17,9 @@ class FloorTom {
 
         // drum head color
         this.headColor = "#f5f5f5"
-
     }
 
-    buildFloorTom () {
+    drawFloorTom() {
         // floor legs behind the drum
         this.ctx.beginPath();
         this.ctx.rect(560, 490, 5, 80);
@@ -84,7 +83,7 @@ class FloorTom {
         this.ctx.closePath();
     }
 
-    hitFloorTom () {
+    hit () {
         this.shellY = 450;
         this.bottomY = 530;
         this.topRingY = 450;
@@ -109,6 +108,10 @@ class FloorTom {
         this.drumHeadY --;
     }
 
+    update() {
+        this.drawFloorTom();
+        this.checkDrumHeight();
+    }
 }
 
 export default FloorTom;

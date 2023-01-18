@@ -109,3 +109,5 @@ class CymbalStands {
     }
 
 }
+
+export default CymbalStands;

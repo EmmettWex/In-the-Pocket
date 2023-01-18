@@ -1,8 +1,8 @@
 import { Howl, Howler } from 'howler';
 
 class ElectronicDrums {
-    constructor(hit) {
-        this.hit = hit;
+    
+    constructor() {
         
         this.functions = new Map([
             ["1", this.hitBassDrum],
@@ -23,19 +23,9 @@ class ElectronicDrums {
             ["9", this.hitCrashOne],
             ["0", this.hitCrashTwo]
         ]);
-
-        // debugger
-
-        // console.log(this.functions);
-        this.handleHit = this.handleHit.bind(this);
-        this.handleHit(this.hit);
     }
 
-    handleHit(event) {
-        event.preventDefault();
-
-        // downcase struckKey to pass into the map
-        const struckKey = event.key.toLowerCase();
+    handleHit(struckKey) {
 
         // to key into the map you use the .get() function!
         if (this.functions.has(struckKey)) {

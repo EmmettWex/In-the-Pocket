@@ -5,7 +5,7 @@ class ClosedHats {
         this.hatHeight = 425;
     }
 
-    drawHats() {
+    drawClosedHats() {
         // bottom high hat
         this.ctx.beginPath();
         this.ctx.ellipse(400, this.hatHeight, 10, 50, 1.5 * Math.PI, 1.5 * Math.PI, .5 * Math.PI, true);
@@ -33,7 +33,7 @@ class ClosedHats {
         this.ctx.closePath();
     }
 
-    hitHats() {
+    hit() {
         this.hatHeight = 430;
     }
 
