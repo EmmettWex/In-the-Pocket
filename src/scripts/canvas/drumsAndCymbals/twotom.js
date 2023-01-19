@@ -71,7 +71,7 @@ class TwoTom {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['./assets/audio_files/rock/Tom M.wav']
+                src: ['./assets/audio_files/Rock/Tom M.wav']
             });
 
             sound.play();

@@ -40,7 +40,7 @@ class OpenHats {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['./assets/audio_files/rock/Hat Open.wav']
+                src: ['./assets/audio_files/Rock/Hat Open.wav']
             });
 
             sound.play();

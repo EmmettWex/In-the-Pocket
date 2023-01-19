@@ -36,7 +36,7 @@ class BassDrum {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['./assets/audio_files/rock/Bassdrum.wav']
+                src: ['./assets/audio_files/Rock/Bassdrum.wav']
             });
 
             sound.play();

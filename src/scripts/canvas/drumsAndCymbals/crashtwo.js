@@ -44,7 +44,7 @@ class CrashTwo {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['./assets/audio_files/rock/Cowbell L.wav']
+                src: ['./assets/audio_files/Rock/Cowbell L.wav']
             });
 
             sound.play();

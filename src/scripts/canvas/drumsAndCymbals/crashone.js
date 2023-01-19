@@ -44,7 +44,7 @@ class CrashOne {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['./assets/audio_files/rock/Crash.wav']
+                src: ['./assets/audio_files/Rock/Crash.wav']
             });
 
             sound.play();

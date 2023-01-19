@@ -96,7 +96,7 @@ class SnareDrum {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['./assets/audio_files/rock/Snaredrum.wav']
+                src: ['./assets/audio_files/Rock/Snaredrum.wav']
             });
 
             sound.play();
