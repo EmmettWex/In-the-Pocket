@@ -40,13 +40,13 @@ class ClosedHats {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/rock/Hat Closed.wav']
+                src: ['./assets/audio_files/rock/Hat Closed.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/Electric_Kit/Hat Closed.wav']
+                src: ['./assets/audio_files/Electric_Kit/Hat Closed.wav']
             });
 
             sound.play();

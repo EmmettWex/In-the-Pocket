@@ -71,13 +71,13 @@ class OneTom {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/rock/Tom H.wav']
+                src: ['./assets/audio_files/rock/Tom H.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/Electric_Kit/Tom H.wav']
+                src: ['./assets/audio_files/Electric_Kit/Tom H.wav']
             });
 
             sound.play();

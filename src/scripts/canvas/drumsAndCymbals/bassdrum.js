@@ -30,21 +30,19 @@ class BassDrum {
         this.ctx.stroke();
     }
 
-
-
     hit(drumKit) {
         this.count = 5;
         this.bassDrumColor = "#eaa4db";
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/rock/Bassdrum.wav']
+                src: ['./assets/audio_files/rock/Bassdrum.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/Electric_Kit/Bassdrum-01.wav']
+                src: ['./assets/audio_files/Electric_Kit/Bassdrum-01.wav']
             });
 
             sound.play();

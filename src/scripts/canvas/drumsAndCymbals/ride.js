@@ -47,13 +47,13 @@ class Ride {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/rock/Ride.wav']
+                src: ['./assets/audio_files/rock/Ride.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../../../../assets/audio_files/Electric_Kit/Cabasa.wav']
+                src: ['./assets/audio_files/Electric_Kit/Cabasa.wav']
             });
 
             sound.play();
