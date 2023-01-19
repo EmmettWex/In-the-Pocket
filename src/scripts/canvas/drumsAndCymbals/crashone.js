@@ -44,13 +44,13 @@ class CrashOne {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../assets/audio_files/rock/Crash.wav']
+                src: ['../../../../assets/audio_files/rock/Crash.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../assets/audio_files/Electric_Kit/Crash-01.wav']
+                src: ['../../../../assets/audio_files/Electric_Kit/Crash-01.wav']
             });
 
             sound.play();

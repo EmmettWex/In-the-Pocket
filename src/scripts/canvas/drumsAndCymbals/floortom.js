@@ -95,13 +95,13 @@ class FloorTom {
         
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../assets/audio_files/rock/Tom L.wav']
+                src: ['../../../../assets/audio_files/Rock/Tom L.wav']
             });
-
+            
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../assets/audio_files/Electric_Kit/Tom L.wav']
+                src: ['../../../../assets/audio_files/Electric_Kit/Tom L.wav']
             });
 
             sound.play();

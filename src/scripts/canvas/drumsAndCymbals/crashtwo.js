@@ -44,13 +44,13 @@ class CrashTwo {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../assets/audio_files/rock/Cowbell L.wav']
+                src: ['../../../../assets/audio_files/rock/Cowbell L.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../assets/audio_files/Electric_Kit/Crash-02.wav']
+                src: ['../../../../assets/audio_files/Electric_Kit/Crash-02.wav']
             });
 
             sound.play();

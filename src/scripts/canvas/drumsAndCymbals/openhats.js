@@ -40,13 +40,13 @@ class OpenHats {
 
         if (drumKit === "rock") {
             let sound = new Howl({
-                src: ['../assets/audio_files/rock/Hat Open.wav']
+                src: ['../../../../assets/audio_files/rock/Hat Open.wav']
             });
 
             sound.play();
         } else if (drumKit === "electronic") {
             let sound = new Howl({
-                src: ['../assets/audio_files/Electric_Kit/Hat Open.wav']
+                src: ['../../../../assets/audio_files/Electric_Kit/Hat Open.wav']
             });
 
             sound.play();
