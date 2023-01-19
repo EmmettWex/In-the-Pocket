@@ -15,6 +15,10 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.js$/, // applies to js files
                 use: ['babel-loader'], // transpiles your js
                 exclude: /node_modules/, // don't transpile node modules
