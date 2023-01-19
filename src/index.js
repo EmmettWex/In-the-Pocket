@@ -107,23 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(playDrums);
     }
 
-    
-
     // This allows you to record your drum track.
-    // const recorder = document.getElementById('recorder');
-    // const record = document.getElementById('record');
-    // let recording = false;
-    // recorder.addEventListener('submit', (event) =>{
-    //     event.preventDefault();
+    const recorder = document.getElementById('recorder');
+    const record = document.getElementById('record');
+    let recording = false;
+    recorder.addEventListener('submit', (event) =>{
+        event.preventDefault();
         
-    //     if (recording === false) {
-    //         recording = true;
-    //         record.value = 'Stop Recording';
-    //     } else {
-    //         recording = false;
-    //         record.value = 'Start Recording';
-    //     }
-    // })
+        if (recording === false) {
+            recording = true;
+            record.value = 'Stop Recording';
+        } else {
+            recording = false;
+            record.value = 'Start Recording';
+        }
+    })
 
     // will need an empty array-like object
     // every time we want to record a track
