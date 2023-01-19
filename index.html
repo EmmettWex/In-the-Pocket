@@ -47,13 +47,40 @@
                 <p class="controls">Crash Two: 0</p>
             </div>
         </div>
+        <div>
+            <button class="button" id="open-modal">Directions</button>
+        </div>
     </section>
 
     <canvas id="stage"></canvas>
     <script src="./src/scripts/canvas/stage.js"></script>
     <canvas class="drumset" id="bass-drum"></canvas>
-    <!-- <script src="./src/scripts/canvas/drumset.js"></script> -->
     
+    <section class="instruction-modal" id="whole-modal">
+            <h3 id="modal-title">Welcome to In The Pocket</h3>
+            <p id="intro">
+                This is a drumset you can play on your keybord.
+                You can switch between two drum sets with the buttons on the left of your screen.
+            </p>
+
+            <div class="keyboard-controls">
+                <p class="nstrctn">Bass Drum: 1 & Space Bar</p>
+                <p class="nstrctn">Snare Drum: 2 & Y</p>
+                <p class="nstrctn">One Tom: 3 & U</p>
+                <p class="nstrctn">Two Tom: 4 & I</p>
+                <p class="nstrctn">Floor Tom: 5 & O</p>
+                <p class="nstrctn">High Hat Open: 6</p>
+                <p class="nstrctn">High Hat Closed: 7 & E</p>
+                <p class="nstrctn">Ride Cymbal: 8 & R</p>
+                <p class="nstrctn">Crash One: 9</p>
+                <p class="nstrctn">Crash Two: 0</p>
+            </div>
+            
+            <img id="keyboard-legend" src="./assets/keyboard legend.png" alt="">
+
+            <button class="button" id="modal-button">Close</button>
+    </section>
+    <div class="overlay" id="modal-overlay"></div>
 </body>
 
 </html>

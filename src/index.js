@@ -121,7 +121,24 @@ document.addEventListener('DOMContentLoaded', () => {
             recording = false;
             record.value = 'Start Recording';
         }
-    })
+    });
+
+
+    const closeModal = document.getElementById("modal-button");
+    const openModal = document.getElementById("open-modal");
+    const wholeModal = document.getElementById("whole-modal");
+    const modalOverlay = document.getElementById("modal-overlay");
+
+    closeModal.addEventListener('click', () => {
+        wholeModal.style.display = "none";
+        modalOverlay.style.display ="none";
+    });
+
+    openModal.addEventListener('click', () => {
+        wholeModal.style.display = "block";
+        modalOverlay.style.display = "block ";
+    });
+
 
     // will need an empty array-like object
     // every time we want to record a track
