@@ -12,7 +12,3 @@ function make_stage() {
         ctx.drawImage(stage, 0, 0, canvas.width, canvas.height)
     }
 }
-
-ctx.beginPath();
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();

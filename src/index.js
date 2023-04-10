@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ["9", crashone],
         ["0", crashtwo]
     ]);
-    
+
     // draw the drum set here.
     cymbalstands.draw();
     onetom.draw();
@@ -107,21 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(playDrums);
     }
 
-    // This allows you to record your drum track.
-    const recorder = document.getElementById('recorder');
-    const record = document.getElementById('record');
-    let recording = false;
-    recorder.addEventListener('submit', (event) =>{
-        event.preventDefault();
+    // // This allows you to record your drum track.
+    // const recorder = document.getElementById('recorder');
+    // const record = document.getElementById('record');
+    // let recording = false;
+    // recorder.addEventListener('submit', (event) =>{
+    //     event.preventDefault();
         
-        if (recording === false) {
-            recording = true;
-            record.value = 'Stop Recording';
-        } else {
-            recording = false;
-            record.value = 'Start Recording';
-        }
-    });
+    //     if (recording === false) {
+    //         recording = true;
+    //         record.value = 'Stop Recording';
+    //     } else {
+    //         recording = false;
+    //         record.value = 'Start Recording';
+    //     }
+    // });
 
 
     const closeModal = document.getElementById("modal-button");
