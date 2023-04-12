@@ -143,7 +143,7 @@ body {
     display: flex;
     flex-direction: row;
     font-family: sans-serif;
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     background-image:
         linear-gradient(
